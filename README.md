@@ -55,13 +55,23 @@ El proyecto está implementado bajo el patrón **Flutter Clean Architecture**, m
 
 ---
 
-## 🚀 Estado actual
+## 📥 Instalación
 
-- ✅ Recordatorios funcionales  
-- ✅ Notificaciones activas  
-- ⚙️ Sincronización local y remota  
-- ⚠️ Pendiente: actualización automática de la interfaz tras acciones desde la notificación  
-- ⚠️ Pendiente: cambio automático de estado a “Pendiente” si se ignora una notificación
+Para instalar y ejecutar **Vida Activa** en un dispositivo Android, sigue estos pasos:
 
----
+1. **Conecta tu dispositivo Android** mediante USB y habilita la opción de **Depuración USB** en tu dispositivo.
 
+2. Abre una terminal en la raíz del proyecto y ejecuta los siguientes comandos:
+
+```bash
+# Limpia el proyecto
+flutter clean
+
+# Instala las dependencias
+flutter pub get
+
+# Genera un APK optimizado para producción
+flutter build apk --release
+
+# Instala la aplicación en el dispositivo conectado
+flutter install
