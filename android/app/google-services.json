@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "990087971485",
+    "project_id": "vida-activa-c08f9",
+    "storage_bucket": "vida-activa-c08f9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990087971485:android:1e1a4d72897e3e457e8a74",
+        "android_client_info": {
+          "package_name": "com.example.movement_reminder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDc3HYbAoSjRrrp8pt39hANGrts_UfUfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
