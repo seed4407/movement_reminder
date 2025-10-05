@@ -185,7 +185,6 @@ class NotificationService {
 
     int index = 0;
     for (var day in days) {
-      // Calcula la próxima fecha para este día
       tz.TZDateTime scheduledDate = tz.TZDateTime(
         tz.local,
         now.year,
@@ -195,7 +194,6 @@ class NotificationService {
         minute,
       );
 
-      // Ajusta al próximo día correcto
       while (scheduledDate.weekday != day || scheduledDate.isBefore(now)) {
         scheduledDate = scheduledDate.add(const Duration(days: 1));
       }
