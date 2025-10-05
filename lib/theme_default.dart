@@ -22,7 +22,6 @@ class UICustomDarkColors {
 ThemeData buildLightTheme(ThemeNotifier themeNotifier) {
   final ThemeData base = ThemeData.light();
   return base.copyWith(
-    // splashColor: const Color.fromARGB(255, 137, 187, 252),
     dividerColor: UICustomLightColors.primary,
     brightness: Brightness.light,
     primaryColor: UICustomLightColors.primary,

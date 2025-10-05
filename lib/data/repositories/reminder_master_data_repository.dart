@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:movement_reminder/app/pages/splash/splash_controller.dart';
 import 'package:movement_reminder/data/models/reminder_model.dart';
 import 'package:movement_reminder/data/repositories/local/reminder_local_data_repository.dart';
 import 'package:movement_reminder/data/repositories/remote/reminder_remote_data_repository.dart';
@@ -10,7 +9,6 @@ import 'package:logging/logging.dart';
 import 'package:movement_reminder/notification_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 const _uuid = Uuid();
 

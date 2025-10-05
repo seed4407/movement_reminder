@@ -4,7 +4,6 @@ import 'package:movement_reminder/app/pages/home/widget/pop_reminder_card/pop_re
 import 'package:movement_reminder/data/repositories/reminder_master_data_repository.dart';
 import 'package:movement_reminder/domain/entities/reminder.dart';
 import 'package:movement_reminder/theme_default.dart';
-import 'package:movement_reminder/app/pages/home/widget/pop_reminder_card/pop_reminder_card_presenter.dart';
 
 class PopReminderCardPage extends CleanView {
   final Reminder? reminder;

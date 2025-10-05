@@ -3,16 +3,13 @@ import 'package:movement_reminder/app/pages/home/home_controller.dart';
 // import 'package:personal_diary/domain/entities/user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
-import 'package:movement_reminder/app/pages/home/widget/pop_reminder_card/pop_reminder_card_presenter.dart';
 import 'package:movement_reminder/app/pages/home/widget/pop_reminder_card/pop_reminder_card_view.dart';
 import 'package:movement_reminder/data/repositories/reminder_master_data_repository.dart';
-import 'package:movement_reminder/domain/entities/reminder.dart';
 import 'package:movement_reminder/theme_default.dart';
 import 'package:movement_reminder/theme_notifier.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:movement_reminder/app/pages/home/widget/reminder_card.dart';
-import 'package:movement_reminder/notification_service.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class HomePage extends CleanView {
@@ -30,19 +27,6 @@ class HomePageView extends CleanViewState<HomePage, HomeController> {
   @override
   void dispose() {
     super.dispose();
-  }
-
-  Future<void> requestNotificationPermission() async {
-    PermissionStatus status = await Permission.notification.request();
-
-    if (status.isGranted) {
-      print("Permiso concedido");
-    } else if (status.isDenied) {
-      print("Permiso denegado");
-    } else if (status.isPermanentlyDenied) {
-      print("Permiso denegado permanentemente, abre ajustes");
-      openAppSettings();
-    }
   }
 
   @override

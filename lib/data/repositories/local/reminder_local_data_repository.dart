@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 import 'package:movement_reminder/data/models/reminder_model.dart';
 import 'package:movement_reminder/domain/entities/reminder.dart';

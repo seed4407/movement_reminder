@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:expansion_tile_list/expansion_tile_list.dart';
 import 'package:movement_reminder/theme_default.dart';
 
 class ReminderCard extends StatelessWidget {

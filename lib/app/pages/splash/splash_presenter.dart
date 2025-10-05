@@ -1,10 +1,6 @@
-import 'dart:ffi';
-
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
-import 'package:movement_reminder/domain/entities/reminder.dart';
 import 'package:movement_reminder/domain/repositories/reminder_repository.dart';
 import 'package:movement_reminder/domain/usecases/get_all_reminder_synchronize_usecase.dart';
-import 'package:movement_reminder/domain/usecases/get_all_reminder_usecase.dart';
 
 class SplashPresenter extends Presenter {
   SplashPresenter(ReminderRemoteSync reminderRemoteSyncRepository)

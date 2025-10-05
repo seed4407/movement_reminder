@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
 import 'package:movement_reminder/app/pages/home/widget/pop_reminder_card/pop_reminder_card_presenter.dart';

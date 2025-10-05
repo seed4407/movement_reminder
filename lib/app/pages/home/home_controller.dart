@@ -3,11 +3,13 @@ import 'package:movement_reminder/app/pages/home/home_presenter.dart';
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
 import 'package:movement_reminder/domain/entities/reminder.dart';
 import 'package:movement_reminder/domain/repositories/reminder_repository.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class HomeController extends Controller {
   HomeController(ReminderRepository reminderRepository)
     : _presenter = HomePresenter(reminderRepository) {
     getAllReminder();
+    requestNotificationPermission();
   }
 
   final HomePresenter _presenter;
@@ -150,9 +152,21 @@ class HomeController extends Controller {
     refreshUI();
   }
 
+  Future<void> requestNotificationPermission() async {
+    PermissionStatus status = await Permission.notification.request();
+
+    if (status.isGranted) {
+      print("Permiso concedido");
+    } else if (status.isDenied) {
+      print("Permiso denegado");
+    } else if (status.isPermanentlyDenied) {
+      print("Permiso denegado permanentemente, abre ajustes");
+      openAppSettings();
+    }
+  }
+
   @override
   void onDisposed() {
     super.onDisposed();
-    // Limpieza si más adelante agregas streams o recursos
   }
 }

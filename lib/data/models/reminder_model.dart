@@ -61,7 +61,6 @@ class ReminderModel extends Reminder {
       frequencyText: json['frequencyText'] as String,
       state: json['state'] as String,
       daysSelect: (json['daysSelect'] as List).cast<bool>(),
-      // Usamos 'safeIds' que es List<int> o una lista vacía
       idsNotification: safeIds.isNotEmpty ? safeIds : null,
     );
   }

@@ -6,7 +6,6 @@ import 'package:movement_reminder/theme_notifier.dart';
 import 'package:movement_reminder/theme_default.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:movement_reminder/notification_service.dart';
-import 'package:timezone/data/latest.dart' as tz;
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 void main() async {
@@ -23,7 +22,6 @@ void main() async {
 class Main extends StatelessWidget {
   const Main({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     final RouterApp routerApp = RouterApp();

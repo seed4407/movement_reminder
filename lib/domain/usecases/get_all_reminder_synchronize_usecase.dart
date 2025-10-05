@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
-import 'package:movement_reminder/domain/entities/reminder.dart';
 import 'package:movement_reminder/domain/repositories/reminder_repository.dart';
 
 class GetAllReminderSynchronizeUsecase extends UseCase<void, void> {

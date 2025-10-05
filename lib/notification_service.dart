@@ -12,14 +12,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz;
 
-@pragma('vm:entry-point') // Anotación esencial para que Flutter la reconozca
+@pragma('vm:entry-point')
 void notificationTapBackground(NotificationResponse notificationResponse) {
-  // Este código se ejecuta cuando el usuario interactúa con la notificación
-  // y la aplicación está cerrada o en segundo plano.
   print('✅ Acción de fondo recibida: ${notificationResponse.actionId}');
-
-  // NOTA: Si necesitas acceder a lógica de negocio aquí, usa una función
-  // estática o un patrón de localizador de servicios (como GetIt).
 }
 
 class NotificationService {
@@ -82,7 +77,6 @@ class NotificationService {
         print('Error al manejar acción de notificación: $e');
         print(stack);
       } finally {
-        // 3️⃣ Solo después de que todo terminó, navega
         navigatorKey.currentState?.pushNamedAndRemoveUntil(
           Pages.home,
           (route) => false,
@@ -94,10 +88,8 @@ class NotificationService {
       settings,
       onDidReceiveNotificationResponse: (NotificationResponse response) {
         if (response.actionId != null) {
-          // Ejecuta la lógica aquí mismo o llama a un método de la instancia
           handleNotificationAction(response.actionId!, response.payload);
         }
-        // Si toca el cuerpo, puedes manejar la navegación aquí (response.actionId == null)
       },
       onDidReceiveBackgroundNotificationResponse: notificationTapBackground,
     );
